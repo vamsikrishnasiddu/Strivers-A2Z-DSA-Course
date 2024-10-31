@@ -13,6 +13,7 @@ func main() {
 	//pattern6()
 	//pattern7()
 	//pattern8()
+	pattern9()
 }
 
 /*
@@ -147,20 +148,20 @@ func pattern6() {
 /*
         *
 			 ***
-      ***** 
+      *****
      *******
 		*********
 */
 
-func pattern7(){
-	n:=5
+func pattern7() {
+	n := 5
 	// outer loop iterates 5 times.
-	for i:=0;i<n;i++{
-	// inner loop iterates upto 2*n-1
-		for j:=0;j<2*n-1;j++{
-			if j>=n-i-1 && j<=n-1+i{
+	for i := 0; i < n; i++ {
+		// inner loop iterates upto 2*n-1
+		for j := 0; j < 2*n-1; j++ {
+			if j >= n-i-1 && j <= n-1+i {
 				print("*")
-			}else{
+			} else {
 				print(" ")
 			}
 		}
@@ -170,20 +171,22 @@ func pattern7(){
 
 /*
 *********
- ******* 
-	*****  
-	 ***   
-		*    
+ *******
+	*****
+	 ***
+		*
 */
 
-func pattern8(){
-	n:=5
+func pattern8() {
+	n := 5
 	// outer loop iterates 5 times.
-	for i:=0;i<n;i++{
-		for j:=0;j<2*n-1;j++{
-			if j>=i && j<2*n-1-i{
+	for i := 0; i < n; i++ {
+		for j := 0; j < 2*n-1; j++ {
+			// inner loop iterates upto 2*n-1
+			// * will be printed from i to 2*n-1-i
+			if j >= i && j < 2*n-1-i {
 				print("*")
-			}else{
+			} else {
 				print(" ")
 			}
 		}
@@ -191,4 +194,22 @@ func pattern8(){
 	}
 }
 
+/*
+		*
+	 ***
+	*****
+ *******
+*********
+*********
+ *******
+	*****
+	 ***
+		*
 
+*/
+
+func pattern9() {
+	//combination of both pattern7 and pattern8
+	pattern7()
+	pattern8()
+}
