@@ -5,7 +5,8 @@ import (
 )
 
 func main() {
-	pattern1()
+	//pattern1()
+	pattern2()
 }
 
 /*
@@ -28,3 +29,26 @@ func pattern1() {
 	}
 
 }
+
+/*
+*
+**
+***
+****
+*****
+*/
+
+func pattern2(){
+
+	// outer to loop to repeat the inner loop 5 times.
+
+	for i:=0;i<5;i++{
+		// inner loop to print the '*'
+
+		for j:=0;j<=i;j++{
+			fmt.Print("*")
+		}
+		fmt.Println()
+	}
+}
+
