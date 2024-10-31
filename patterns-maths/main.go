@@ -6,7 +6,8 @@ import (
 
 func main() {
 	//pattern1()
-	pattern2()
+	//pattern2()
+	pattern3()
 }
 
 /*
@@ -47,6 +48,27 @@ func pattern2(){
 
 		for j:=0;j<=i;j++{
 			fmt.Print("*")
+		}
+		fmt.Println()
+	}
+}
+
+/*
+1
+12
+123
+1234
+12345
+*/
+
+func pattern3(){
+	// outer loop to iterate  5 times.
+
+	for i:=0;i<5;i++{
+		// inner loop to print the numbers.
+		// j start from 0 and will go upto i
+		for j:=0;j<=i;j++{
+			fmt.Print(j+1)
 		}
 		fmt.Println()
 	}
