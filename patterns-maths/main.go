@@ -44,7 +44,8 @@ func pattern2(){
 	// outer to loop to repeat the inner loop 5 times.
 
 	for i:=0;i<5;i++{
-		// inner loop to print the '*'
+		// inner loop will iterate upto i 
+		// it will print the '*' in each iteration.
 
 		for j:=0;j<=i;j++{
 			fmt.Print("*")
@@ -65,8 +66,8 @@ func pattern3(){
 	// outer loop to iterate  5 times.
 
 	for i:=0;i<5;i++{
-		// inner loop to print the numbers.
-		// j start from 0 and will go upto i
+		// inner loop to iterate upto i.
+		// it will print the numbers using j+1
 		for j:=0;j<=i;j++{
 			fmt.Print(j+1)
 		}
