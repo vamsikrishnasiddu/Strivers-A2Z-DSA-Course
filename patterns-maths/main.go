@@ -10,7 +10,9 @@ func main() {
 	//pattern3()
 	//pattern4()
 	//pattern5()
-	pattern6()
+	//pattern6()
+	//pattern7()
+	//pattern8()
 }
 
 /*
@@ -141,3 +143,52 @@ func pattern6() {
 
 	}
 }
+
+/*
+        *
+			 ***
+      ***** 
+     *******
+		*********
+*/
+
+func pattern7(){
+	n:=5
+	// outer loop iterates 5 times.
+	for i:=0;i<n;i++{
+	// inner loop iterates upto 2*n-1
+		for j:=0;j<2*n-1;j++{
+			if j>=n-i-1 && j<=n-1+i{
+				print("*")
+			}else{
+				print(" ")
+			}
+		}
+		fmt.Println()
+	}
+}
+
+/*
+*********
+ ******* 
+	*****  
+	 ***   
+		*    
+*/
+
+func pattern8(){
+	n:=5
+	// outer loop iterates 5 times.
+	for i:=0;i<n;i++{
+		for j:=0;j<2*n-1;j++{
+			if j>=i && j<2*n-1-i{
+				print("*")
+			}else{
+				print(" ")
+			}
+		}
+		fmt.Println()
+	}
+}
+
+
