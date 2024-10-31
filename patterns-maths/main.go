@@ -8,7 +8,8 @@ func main() {
 	//pattern1()
 	//pattern2()
 	//pattern3()
-	pattern4()
+	//pattern4()
+	pattern5()
 }
 
 /*
@@ -94,4 +95,30 @@ func pattern4(){
 		 fmt.Println()
 	 }
 }
+
+/*
+
+*****
+****
+***
+**
+*
+*/
+
+func pattern5(){
+	n:=5
+	// outer loop iterates 5 times.
+	for i:=0;i<n;i++{
+		// inner loop goes upto n-i
+		for j:=0;j<n-i;j++{
+			 fmt.Print("*")
+			
+		}
+		fmt.Println()
+	}
+}
+
+
+
+
 
