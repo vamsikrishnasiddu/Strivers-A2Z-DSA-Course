@@ -20,7 +20,9 @@ func main() {
 	//pattern13()
 	//pattern14()
 	//pattern15()
-	pattern16()
+	//pattern16()
+	//pattern17()
+	pattern18()
 
 }
 
@@ -280,49 +282,47 @@ func pattern11() {
 
 */
 
-func pattern12(){
-	n:=10
+func pattern12() {
+	n := 10
 
 	// outer loop to iterate 4 times
-	 for i:=0;i<n;i++{
-		 for j:=0;j<=2*n-1;j++{
+	for i := 0; i < n; i++ {
+		for j := 0; j <= 2*n-1; j++ {
 
-			 // print the numbers and spaces
+			// print the numbers and spaces
 
-			 if (j>=0 && j<=i){
-				 fmt.Print(j+1)
-			 }else if (j>=2*n-1-i){
-				 fmt.Print(2*n-j)
-			 }else{
-				 fmt.Print(" ")
-			 }
-		 }
-		 fmt.Println()
-	 }
+			if j >= 0 && j <= i {
+				fmt.Print(j + 1)
+			} else if j >= 2*n-1-i {
+				fmt.Print(2*n - j)
+			} else {
+				fmt.Print(" ")
+			}
+		}
+		fmt.Println()
+	}
 }
 
-
 /*
-1 
-2 3 
-4 5 6 
-7 8 9 10 
-11 12 13 14 15 
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
 
 */
 
-
-func pattern13(){
-	n:=5
-	k:=1
+func pattern13() {
+	n := 5
+	k := 1
 	// outer loop to iterate 5 times.
 
-	for i:=0;i<n;i++{
+	for i := 0; i < n; i++ {
 		// inner loop will iterate upto i
 
-		for j:=0;j<=i;j++{
-			fmt.Print(k," ")
-			k=k+1
+		for j := 0; j <= i; j++ {
+			fmt.Print(k, " ")
+			k = k + 1
 		}
 		fmt.Println()
 	}
@@ -336,23 +336,22 @@ ABCD
 ABCDE
 */
 
-
-func pattern14(){
+func pattern14() {
 	var a rune
 
 	// outer loop to iterate 5 times.
 
-	for i:=0;i<5;i++{
-		 a = 'A'
+	for i := 0; i < 5; i++ {
+		a = 'A'
 
 		// inner loop to iterate upto i.
 
-		for j:=0;j<=i;j++{
-			fmt.Print(string(a+rune(j)))
+		for j := 0; j <= i; j++ {
+			fmt.Print(string(a + rune(j)))
 		}
 		fmt.Println()
 	}
-  
+
 }
 
 /*
@@ -363,25 +362,22 @@ AB
 A
 */
 
-
-func pattern15(){
-	n:=5
+func pattern15() {
+	n := 5
 	var a rune
 
 	// outer loop to iterate 5 times.
 
-	for i:=0;i<5;i++{
-		a ='A'
+	for i := 0; i < 5; i++ {
+		a = 'A'
 
 		// inner loop to iterate upto n-i
-		for j:=0;j<n-i;j++{
-			fmt.Print(string(a+rune(j)))
+		for j := 0; j < n-i; j++ {
+			fmt.Print(string(a + rune(j)))
 		}
 		fmt.Println()
 	}
 }
-
-
 
 /*
 A
@@ -391,25 +387,39 @@ DDDD
 EEEEE
 */
 
-
-
-func pattern16(){
+func pattern16() {
 	var a rune
 
 	// outer loop to iterate 5 times.
 
-	for i:=0;i<5;i++{
-		 a = 'A'
+	for i := 0; i < 5; i++ {
+		a = 'A'
 
 		// inner loop to iterate upto i.
 
-		for j:=0;j<=i;j++{
-			fmt.Print(string(a+rune(i)))
+		for j := 0; j <= i; j++ {
+			fmt.Print(string(a + rune(i)))
 		}
 		fmt.Println()
 	}
 
 }
 
+func pattern17() {
 
+	// yet to be implemented
+}
 
+func pattern18() {
+
+	n := 5
+	var a rune = 'A' + rune(n-1)
+	// outer loop to iterate n times.
+	for i := 0; i < n; i++ {
+		// inner loop iterates upto i times.
+		for j := 0; j <= i; j++ {
+			fmt.Print(string(a-rune(i-j)), " ")
+		}
+		fmt.Println()
+	}
+}
