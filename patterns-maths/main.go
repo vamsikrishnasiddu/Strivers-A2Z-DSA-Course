@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
 func main() {
@@ -17,6 +16,7 @@ func main() {
 	//pattern9()
 	//pattern10()
 	pattern11()
+
 }
 
 /*
@@ -237,7 +237,6 @@ func pattern10() {
 	pattern5()
 }
 
-
 /*
 1
 01
@@ -246,7 +245,6 @@ func pattern10() {
 10101
 
 */
-
 
 func pattern11() {
 	var k int
@@ -261,7 +259,7 @@ func pattern11() {
 		}
 
 		for j := 0; j <= i; j++ {
-			k = int(math.Abs(float64(k) - 1))
+			k = 1 - k
 			fmt.Print(k)
 		}
 		fmt.Println()
