@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 func main() {
@@ -13,7 +14,9 @@ func main() {
 	//pattern6()
 	//pattern7()
 	//pattern8()
-	pattern9()
+	//pattern9()
+	//pattern10()
+	pattern11()
 }
 
 /*
@@ -212,4 +215,56 @@ func pattern9() {
 	//combination of both pattern7 and pattern8
 	pattern7()
 	pattern8()
+}
+
+/*
+*
+**
+***
+****
+*****
+*****
+****
+***
+**
+*
+
+ */
+
+func pattern10() {
+	//combination of pattern2 and pattern5
+	pattern2()
+	pattern5()
+}
+
+
+/*
+1
+01
+101
+0101
+10101
+
+*/
+
+
+func pattern11() {
+	var k int
+
+	// outer loop to iterate 5 times.
+	for i := 0; i < 5; i++ {
+		k = 1
+
+		// inner loop to go until i.
+		if i%2 == 0 {
+			k = 0
+		}
+
+		for j := 0; j <= i; j++ {
+			k = int(math.Abs(float64(k) - 1))
+			fmt.Print(k)
+		}
+		fmt.Println()
+	}
+
 }
