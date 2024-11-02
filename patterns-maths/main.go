@@ -16,7 +16,8 @@ func main() {
 	//pattern9()
 	//pattern10()
 	//pattern11()
-	pattern12()
+	//pattern12()
+	pattern13()
 
 }
 
@@ -295,4 +296,31 @@ func pattern12(){
 		 }
 		 fmt.Println()
 	 }
+}
+
+
+/*
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15 
+
+*/
+
+
+func pattern13(){
+	n:=5
+	k:=1
+	// outer loop to iterate 5 times.
+
+	for i:=0;i<n;i++{
+		// inner loop will iterate upto i
+
+		for j:=0;j<=i;j++{
+			fmt.Print(k," ")
+			k=k+1
+		}
+		fmt.Println()
+	}
 }
