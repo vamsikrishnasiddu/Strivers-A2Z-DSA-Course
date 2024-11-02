@@ -19,7 +19,8 @@ func main() {
 	//pattern12()
 	//pattern13()
 	//pattern14()
-	pattern15()
+	//pattern15()
+	pattern16()
 
 }
 
@@ -379,3 +380,36 @@ func pattern15(){
 		fmt.Println()
 	}
 }
+
+
+
+/*
+A
+BB
+CCC
+DDDD
+EEEEE
+*/
+
+
+
+func pattern16(){
+	var a rune
+
+	// outer loop to iterate 5 times.
+
+	for i:=0;i<5;i++{
+		 a = 'A'
+
+		// inner loop to iterate upto i.
+
+		for j:=0;j<=i;j++{
+			fmt.Print(string(a+rune(i)))
+		}
+		fmt.Println()
+	}
+
+}
+
+
+
