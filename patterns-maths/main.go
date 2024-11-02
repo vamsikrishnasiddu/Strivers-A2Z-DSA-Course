@@ -15,7 +15,8 @@ func main() {
 	//pattern8()
 	//pattern9()
 	//pattern10()
-	pattern11()
+	//pattern11()
+	pattern12()
 
 }
 
@@ -265,4 +266,33 @@ func pattern11() {
 		fmt.Println()
 	}
 
+}
+
+/*
+1      1
+22    21
+333  321
+44444321
+
+*/
+
+func pattern12(){
+	n:=10
+
+	// outer loop to iterate 4 times
+	 for i:=0;i<n;i++{
+		 for j:=0;j<=2*n-1;j++{
+
+			 // print the numbers and spaces
+
+			 if (j>=0 && j<=i){
+				 fmt.Print(j+1)
+			 }else if (j>=2*n-1-i){
+				 fmt.Print(2*n-j)
+			 }else{
+				 fmt.Print(" ")
+			 }
+		 }
+		 fmt.Println()
+	 }
 }
